@@ -232,9 +232,13 @@ section{padding-block:clamp(64px,9vw,112px)}
 .give .pencils{margin-top:0}
 
 /* sponsors */
-.sponsor-list{display:flex;flex-wrap:wrap;gap:10px}
-.sponsor-list a,.sponsor-list span{display:inline-block;text-decoration:none;color:var(--ink);font-weight:600;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 16px;transition:border-color .15s ease,color .15s ease}
-.sponsor-list a:hover{border-color:var(--blue);color:var(--blue)}
+.sponsor-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.sponsor-list .logo{position:relative;display:block;aspect-ratio:3/2;background:#FFFFFF;border:1px solid var(--line);border-radius:14px;padding:14px 18px;overflow:hidden;transition:transform .15s ease,border-color .15s ease,box-shadow .15s ease}
+.sponsor-list .logo img{position:absolute;inset:14px 18px;width:calc(100% - 36px);height:calc(100% - 28px);object-fit:contain}
+.sponsor-list .logo.full{border-color:transparent}
+.sponsor-list .logo.full img{inset:6px;width:calc(100% - 12px);height:calc(100% - 12px);object-fit:contain}
+.sponsor-list a.logo:hover{transform:translateY(-2px);border-color:var(--blue);box-shadow:var(--shadow)}
+@media (max-width:480px){.sponsor-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .thanks{margin-top:36px;display:grid;gap:12px}
 .thanks p{font-family:var(--f-hand);font-size:1.45rem;line-height:1.5;color:var(--ink-soft);max-width:none}
 .thanks p b{color:var(--red-ink);font-weight:700}
@@ -540,23 +544,23 @@ footer{background:var(--paper);border-top:1px solid var(--line)}
         <p class="lede">Thanks to their kindness, children in El Salvador receive backpacks filled with hope, joy and the tools for a brighter future.</p>
       </div>
       <div class="sponsor-list">
-        <a href="https://leggettventures.com/" target="_blank" rel="noopener">Leggett Ventures</a>
-        <a href="https://cannonfield.com/" target="_blank" rel="noopener">Cannon Field</a>
-        <a href="https://www.fortunaoperating.com/" target="_blank" rel="noopener">Fortuna Operating</a>
-        <a href="https://www.northhudsonrp.com/" target="_blank" rel="noopener">North Hudson Resource Partners</a>
-        <a href="https://onpointcustomhomes.com/" target="_blank" rel="noopener">On Point Custom Homes</a>
-        <a href="https://www.electricalworksofhouston.com/" target="_blank" rel="noopener">Electrical Works of Houston</a>
-        <a href="http://www.tpglassllc.com/" target="_blank" rel="noopener">TP Glass</a>
-        <a href="https://autumnmechanical.com/" target="_blank" rel="noopener">Autumn Mechanical</a>
-        <a href="https://www.bellacanvas.com/" target="_blank" rel="noopener">Bella+Canvas</a>
-        <a href="https://houstondtftransfers.com/" target="_blank" rel="noopener">Houston DTF Transfers</a>
-        <a href="https://www.radiantvidaspa.com/" target="_blank" rel="noopener">Radiant Vida</a>
-        <a href="https://mtgconstruct.com/" target="_blank" rel="noopener">MTG Construction</a>
-        <a href="https://www.perfectionsupply.com/" target="_blank" rel="noopener">Perfection Supply</a>
-        <a href="https://texasbrandsurfaces.com/" target="_blank" rel="noopener">Texas Brand Surfaces</a>
-        <a href="https://www.bldr.com/" target="_blank" rel="noopener">Builders FirstSource</a>
-        <a href="https://www.americanfence.com/location/houston/" target="_blank" rel="noopener">American Fence</a>
-        <span>Vero's Tax &amp; Notary</span>
+        <a class="logo" href="https://leggettcapitalpartners.com/" target="_blank" rel="noopener" title="Leggett Capital Partners"><img src="img/sponsors/leggett-capital-partners.svg" alt="Leggett Capital Partners" loading="lazy"></a>
+        <a class="logo" href="https://cannonfield.com/" target="_blank" rel="noopener" title="Cannon Field"><img src="img/sponsors/cannonfield.jpg" alt="Cannon Field" loading="lazy"></a>
+        <a class="logo" href="https://www.fortunaoperating.com/" target="_blank" rel="noopener" title="Fortuna Operating"><img src="img/sponsors/fortuna.jpg" alt="Fortuna Operating" loading="lazy"></a>
+        <a class="logo" href="https://www.northhudsonrp.com/" target="_blank" rel="noopener" title="North Hudson Resource Partners"><img src="img/sponsors/northhudson.jpg" alt="North Hudson Resource Partners" loading="lazy"></a>
+        <a class="logo" href="https://onpointcustomhomes.com/" target="_blank" rel="noopener" title="On Point Custom Homes"><img src="img/sponsors/onpoint.jpg" alt="On Point Custom Homes" loading="lazy"></a>
+        <a class="logo" href="https://www.electricalworksofhouston.com/" target="_blank" rel="noopener" title="Electrical Works of Houston"><img src="img/sponsors/electricalworks.jpg" alt="Electrical Works of Houston" loading="lazy"></a>
+        <a class="logo" href="http://www.tpglassllc.com/" target="_blank" rel="noopener" title="TP Glass"><img src="img/sponsors/tpglass.jpg" alt="TP Glass" loading="lazy"></a>
+        <a class="logo" href="https://autumnmechanical.com/" target="_blank" rel="noopener" title="Autumn Mechanical"><img src="img/sponsors/autumn.jpg" alt="Autumn Mechanical" loading="lazy"></a>
+        <a class="logo" href="https://www.bellacanvas.com/" target="_blank" rel="noopener" title="Bella+Canvas"><img src="img/sponsors/bellacanvas.jpg" alt="Bella+Canvas" loading="lazy"></a>
+        <a class="logo full" style="background:#FFFFFF" href="https://houstondtftransfers.com/" target="_blank" rel="noopener" title="Houston DTF Transfers"><img src="img/sponsors/houstondtf.jpg" alt="Houston DTF Transfers" loading="lazy"></a>
+        <a class="logo full" style="background:#4F4685" href="https://www.radiantvidaspa.com/" target="_blank" rel="noopener" title="Radiant Vida"><img src="img/sponsors/radiantvida.jpg" alt="Radiant Vida" loading="lazy"></a>
+        <a class="logo full" style="background:#000000" href="https://mtgconstruct.com/" target="_blank" rel="noopener" title="MTG Construction &amp; Renovations"><img src="img/sponsors/mtg.jpg" alt="MTG Construction &amp; Renovations" loading="lazy"></a>
+        <a class="logo" href="https://www.perfectionsupply.com/" target="_blank" rel="noopener" title="Perfection Supply"><img src="img/sponsors/perfection.jpg" alt="Perfection Supply" loading="lazy"></a>
+        <a class="logo" href="https://texasbrandsurfaces.com/" target="_blank" rel="noopener" title="Texas Brand Surfaces"><img src="img/sponsors/texasbrand.jpg" alt="Texas Brand Surfaces" loading="lazy"></a>
+        <a class="logo" href="https://www.bldr.com/" target="_blank" rel="noopener" title="Builders FirstSource"><img src="img/sponsors/bldr.jpg" alt="Builders FirstSource" loading="lazy"></a>
+        <a class="logo" href="https://www.americanfence.com/location/houston/" target="_blank" rel="noopener" title="American Fence Company"><img src="img/sponsors/americanfence.jpg" alt="American Fence Company" loading="lazy"></a>
+        <span class="logo full" style="background:#050509" title="Vero's Tax &amp; Notary"><img src="img/sponsors/veros.jpg" alt="Vero's Tax &amp; Notary" loading="lazy"></span>
       </div>
       <div class="thanks">
         <p>Gracias <b>Tía Sandra</b>, Katarina Schalen, Kenia Martinez, <b>Familia Franco</b>, Brian Miller, Ashley Tucker, Le Tran, Jenny Ascencio, Sabrina, Seslee, Lely, CC, Nina Lambright, and everyone who gave in 2025.</p>
