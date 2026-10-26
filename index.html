@@ -188,6 +188,8 @@ section{padding-block:clamp(64px,9vw,112px)}
 .events{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:14px}
 .event{display:grid;grid-template-columns:72px minmax(0,1fr);gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px}
 .event img{width:72px;height:72px;object-fit:cover;border-radius:10px}
+.event-ph{width:72px;height:72px;border-radius:10px;background:var(--pink-tint);display:grid;place-items:center}
+.event-ph::after{content:"";width:30px;height:30px;background:var(--red);-webkit-mask:var(--heart) center/contain no-repeat;mask:var(--heart) center/contain no-repeat}
 .event b{display:block;line-height:1.25}
 .event small{color:var(--ink-soft);font-size:.88rem}
 .schools{display:flex;flex-wrap:wrap;gap:8px}
@@ -350,7 +352,7 @@ main section h2::after{content:"";display:inline-block;width:.55em;height:.55em;
           <p class="eyebrow">A 501(c)(3) serving children in El Salvador</p>
           <h1 style="margin-top:14px"><span class="c-pink">One backpack</span> <span class="c-orange">can change</span> <span class="c-teal">a child's year.</span></h1>
           <p class="tag">Llenando mochilas, tocando corazones.</p>
-          <p class="lede">At the end of every year we deliver backpacks packed with school supplies, a new outfit, hygiene essentials and a toy to children in under-resourced schools across El Salvador. Then we throw them a party.</p>
+          <p class="lede">At the end of every year we deliver backpacks packed with school supplies, a new outfit, hygiene essentials and a toy to children in under-resourced communities across El Salvador. Then we throw them a party.</p>
           <div class="hero-ctas">
             <a class="btn btn-red" href="#give"><span class="h" aria-hidden="true"></span>Fill a backpack
               <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
@@ -358,7 +360,7 @@ main section h2::after{content:"";display:inline-block;width:.55em;height:.55em;
           </div>
         </div>
         <div class="hero-photo">
-          <img src="img/h2.jpg" alt="Children in red Misión Mochila shirts cheering with volunteers and a clown at a school celebration" width="1600" height="1067">
+          <img src="img/h2.jpg" alt="Children in red Misión Mochila shirts cheering with volunteers and a clown at a celebration" width="1600" height="1067">
           <div class="note"><span class="hand">Cada niño importa.</span><small>Every child matters · Lolotique, December 2025</small></div>
           <span class="fh" style="--c:var(--red);--s:34px;top:-16px;right:24px;--r:14deg" aria-hidden="true"></span>
           <span class="fh o" style="--c:var(--orange);--s:28px;top:30px;right:-14px;--r:-8deg;--d:.8s" aria-hidden="true"></span>
@@ -369,7 +371,7 @@ main section h2::after{content:"";display:inline-block;width:.55em;height:.55em;
 
       <div class="stats" role="list">
         <div class="stat" role="listitem"><b>635</b><span>backpacks delivered in 2024 and 2025</span></div>
-        <div class="stat" role="listitem"><b>8</b><span>schools in Ozatlán for the November 2026 mission</span></div>
+        <div class="stat" role="listitem"><b>8</b><span>communities in Ozatlán for the November 2026 mission</span></div>
         <div class="stat" role="listitem"><b>$40–50</b><span>fills one backpack, start to finish</span></div>
         <div class="stat" role="listitem"><b>4–18</b><span>ages of the children we serve</span></div>
       </div>
@@ -395,7 +397,7 @@ main section h2::after{content:"";display:inline-block;width:.55em;height:.55em;
       </div>
       <div class="story-photos deco-host"><span class="fh" style="--c:var(--orange);--s:28px;top:-14px;right:-6px;--r:12deg;--d:.6s" aria-hidden="true"></span><span class="fh o" style="--c:var(--red);--s:24px;bottom:-12px;left:-8px;--r:-10deg;--d:1.8s" aria-hidden="true"></span>
         <img class="tall" src="img/h5.jpg" alt="A smiling girl holds her new backpack in front of the rainbow Misión Mochila 2025 backdrop" loading="lazy">
-        <img class="sq" src="img/a2.jpg" alt="Misión Mochila volunteers in matching red shirts at the school" loading="lazy">
+        <img class="sq" src="img/a2.jpg" alt="Misión Mochila volunteers in matching red shirts at a celebration" loading="lazy">
         <img class="sq" src="img/a5.jpg" alt="A volunteer paints a child's face at the celebration" loading="lazy">
       </div>
     </div>
@@ -461,9 +463,9 @@ main section h2::after{content:"";display:inline-block;width:.55em;height:.55em;
           <div class="prog-body"><h3>Annual Backpack Drive</h3><p>The heart of Misión Mochila. Each year we collect, pack and deliver fully stocked backpacks to children in need across El Salvador.</p></div>
         </article>
         <article class="prog">
-          <img src="img/g2.jpg" alt="A group of schoolchildren cheering outdoors with Rosie" loading="lazy">
-          <div class="prog-body"><h3>School Adoption Program</h3><p>We partner with under-resourced schools and work with their leaders to meet real needs.</p>
-            <ul><li>Backpacks for every student</li><li>Supplies and encouragement for teachers</li><li>Events that make kids feel seen and celebrated</li></ul></div>
+          <img src="img/g2.jpg" alt="A group of children cheering outdoors with Rosie" loading="lazy">
+          <div class="prog-body"><h3>Community Adoption Program</h3><p>We partner with under-resourced communities and work with their leaders to meet real needs.</p>
+            <ul><li>Backpacks for every child</li><li>Supplies and encouragement for teachers</li><li>Events that make kids feel seen and celebrated</li></ul></div>
         </article>
         <article class="prog">
           <img src="img/g3.jpg" alt="A clown entertains children and families under a festive canopy" loading="lazy">
@@ -481,13 +483,13 @@ main section h2::after{content:"";display:inline-block;width:.55em;height:.55em;
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">Misión in action</p>
-        <h2>Every year, more schools and more kids.</h2>
+        <h2>Every year, more communities and more kids.</h2>
       </div>
       <div class="ledger">
         <div class="year upcoming">
           <div class="year-num">2026<small>November · Ozatlán</small></div>
           <div class="year-body">
-            <p class="year-sum">8 schools and 400+ children in Ozatlán, Usulután. Our biggest mission yet. Meet the communities we'll be visiting:</p>
+            <p class="year-sum">8 communities and 400+ children in Ozatlán, Usulután. Our biggest mission yet. Meet the communities we'll be visiting:</p>
             <div class="events">
               <div class="event"><img src="img/c-violeta.jpg" alt="Children of La Violeta" loading="lazy"><div><b>La Violeta</b><small>Comunidad</small></div></div>
               <div class="event"><img src="img/c-monica.jpg" alt="Children of La Monica" loading="lazy"><div><b>La Monica</b><small>Comunidad</small></div></div>
@@ -496,6 +498,7 @@ main section h2::after{content:"";display:inline-block;width:.55em;height:.55em;
               <div class="event"><img src="img/c-alemanes.jpg" alt="Children of Los Alemanes" loading="lazy"><div><b>Los Alemanes</b><small>Comunidad</small></div></div>
               <div class="event"><img src="img/c-ermita.jpg" alt="Children of La Ermita" loading="lazy"><div><b>La Ermita</b><small>Comunidad</small></div></div>
               <div class="event"><img src="img/c-quesera.jpg" alt="Children of La Quesera" loading="lazy"><div><b>La Quesera</b><small>Comunidad</small></div></div>
+              <div class="event"><span class="event-ph" aria-hidden="true"></span><div><b>La Puerta</b><small>Comunidad</small></div></div>
             </div>
           </div>
         </div>
@@ -640,11 +643,11 @@ main section h2::after{content:"";display:inline-block;width:.55em;height:.55em;
         <details><summary>How much does it cost to sponsor a backpack?</summary><div class="ans"><p>Between $40 and $50 covers one fully stocked backpack.</p></div></details>
         <details><summary>Do I have to buy from the wish lists?</summary><div class="ans"><p>Not at all. The lists are a guide. We're happy to receive any new, age-appropriate items.</p></div></details>
         <details><summary>Can I donate gently used items?</summary><div class="ans"><p>We ask for new items only, so every child receives something that's just for them.</p></div></details>
-        <details><summary>How do you choose which schools to help?</summary><div class="ans"><p>We partner with schools in vulnerable areas of El Salvador and work with local educators to identify the students most in need.</p></div></details>
+        <details><summary>How do you choose which communities to help?</summary><div class="ans"><p>We partner with communities in vulnerable areas of El Salvador and work with local community leaders to identify the children most in need.</p></div></details>
         <details><summary>When do the backpacks get delivered?</summary><div class="ans"><p>At the end of each year, at a celebration with music, food, clowns, and gifts for the teachers too. Our 2024 and 2025 missions were in December; the 2026 mission is in November in Ozatlán.</p></div></details>
         <details><summary>Can I volunteer? Can my kids?</summary><div class="ans"><p>Absolutely. You can pack backpacks, help at events, write holiday letters or spread the word. Kids can write Christmas letters or draw pictures to include in the backpacks.</p></div></details>
         <details><summary>How can my business get involved?</summary><div class="ans"><p>We welcome corporate sponsorships, in-kind donations, and workplace toy or supply drives. Email us and we'll plan it together.</p></div></details>
-        <details><summary>Do you only help children in El Salvador?</summary><div class="ans"><p>For now, yes. Our focus is on schools in El Salvador, and we hope to expand in the future.</p></div></details>
+        <details><summary>Do you only help children in El Salvador?</summary><div class="ans"><p>For now, yes. Our focus is on communities in El Salvador, and we hope to expand in the future.</p></div></details>
       </div>
     </div>
   </section>
